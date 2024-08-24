@@ -1,0 +1,277 @@
+/*  ===== MOBILE styles (reside at the top and are inherited by all devices) ===== */
+/*  ===== See tablet, desktop, and print @media queries at the bottom. */
+
+
+/*   ----- Imports  -----  */
+  /* @import 'node_modules/modern-normalize/modern-normalize.css';  npm install modern-normalize  Resets elements for browser consistency.  https://www.npmjs.com/package/modern-normalize */         
+  /* @import "component1.css";   Component-specific stylesheets, if any.   */
+  @import url('https://fonts.googleapis.com/css2?family=Chivo:wght@700&family=Kanit:ital,wght@0,300;1,600&display=swap');
+
+
+/*   ----- Variables  -----  */
+:root {
+    --skyBlue: rgb(216, 239, 246);
+    --riverBlue: rgb(95, 121, 134);
+    --riverBlueTransparent: rgba(95, 121, 134, 0.85);
+    --shadowBrown: rgb(37, 38, 37);
+    --shadowBrownTransparent: rgba(37, 38, 37, 0.7);
+    --leafGreen: rgb(191, 183, 65);
+    --leafGreenTransparent: rgba(191, 183, 65, 0.7);
+    --stoneBrown: rgb(191, 172, 149);
+    --stoneBrownTransparent: rgba(191, 172, 149, 0.85);
+  }
+  
+  /*  ----- Viewport ----- elements inherited by all remaining elements ----- */
+  body {       /* Can alternatively define in html {}. */
+    background-color: var(--shadowBrown);
+    background-image: url(images/background.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: top left;
+    background-repeat: no-repeat;
+    color: var(--skyBlue);
+    font-family: 'Kanit', sans-serif;
+    margin: 0 auto;
+    padding: 2%;
+    max-width: 80%;
+  }
+  
+  /*  ----- Page layout blocks -----  */
+  header {
+    color: var(--skyBlue);
+    background-color: var(--stoneBrownTransparent);
+    border: 3px solid var(--stoneBrown);
+    border-radius: 30px;
+    margin: 1% auto;
+    padding: 0;
+    text-align: center;
+}
+
+  header img {
+    width: 7rem;
+  }
+
+  main {
+  color: var(--skyBlue);
+  background-color: var(--riverBlueTransparent);
+  border: 3px solid var(--riverBlue);
+  border-radius: 30px;
+  margin: 1% auto;
+  padding: .5rem 1rem;
+}
+  /* section {}
+  article {}
+    #topic1 {}
+    #topic2 {}
+  div {}
+  aside {} */
+  footer {
+    color: var(--skyBlue);
+    background-color: var(--shadowBrownTransparent);
+    border: 3px solid var(--shadowBrown);
+    border-radius: 30px;
+    margin: 1% auto;
+    text-align: center;
+}
+  
+  /* ----- Anchors ----- Text links */
+  /* a {} */
+  a:link {color: var(--leafGreen)}
+  /* a:hover {}
+  a:active {}
+  a:visited {} */
+  
+  /*  ----- Navigation ----- Override text links for navigation only.  */
+  nav {
+    text-align: center;
+    padding: .5rem 1rem;
+    margin: .1rem;
+    display: flex;
+    justify-content: center;
+  }
+  nav a {
+    color: var(--leafGreen);
+    font-size: 1.2em;
+    font-weight: bold;
+    text-decoration: none;
+    background-color: var(--shadowBrownTransparent);
+    border: 3px solid var(--shadowBrown);
+    padding: .3rem .5rem;
+    margin: 0rem .9rem;
+    border-radius: 30px;
+}
+
+  nav a:hover {
+    color: var(--skyBlue);
+    background-color: var(--shadowBrown);
+}
+
+  nav.local {
+    text-align: center;
+    padding: 0;
+    margin: .3rem;
+    flex-flow: row wrap;
+    display: flex;
+    justify-content: center;
+  }
+  nav.local a {
+    color: var(--shadowBrown);
+    font-size: 1em;
+    font-weight: bold;
+    text-decoration: none;
+    background-color: var(--leafGreenTransparent);
+    border: 3px solid var(--leafGreen);
+    padding: .3rem .3rem;
+    margin: .3rem .3rem;
+    border-radius: 30px;
+}
+
+  nav.local a:hover {
+    color: var(--skyBlue);
+    background-color: var(--leafGreen);
+}
+  /*  -----  Typography  ----- */
+  /* p {}
+  br {}
+  ol, ul, dl {}
+  li {}
+  dt {}
+  dd {} */
+  
+  h1, h2, h3, h4, h5, h6 {font-family: 'Chivo', sans-serif;} 
+  /* h1 {}
+  h2 {}
+  h3 {}
+  h4 {}
+  h5 {}
+  h6 {}
+  
+  abbr {}
+  acronym {}
+  address {}
+  blockquote {}
+    q {}
+    cite {}
+  em {}
+  hr {}
+  mark {}
+  s {}
+  span {}
+  strong {}
+  sub {}
+  sup {}
+  time {} */
+  
+  /*  ----- Coding or instructional typography ----- */
+  /* pre {}
+  code {}
+  kbd {}
+  samp {}
+  var {}
+  del {} 
+  ins {} */
+  
+  /*  ----- Table ----- */
+  /* table {}
+  caption {}
+  thead {}
+  tbody {}
+  tfoot {}
+  tr {}
+    tr:nth-child(even) {}
+  th {}
+  td {}
+    td:nth-child(1) {}
+  colgroup {}
+  data {}
+  datalist {} */
+  
+  
+  /*  ----- Form ----- */
+  /* form {}
+  fieldset {}
+    legend {}
+  label {}
+  button {}
+  input {}
+  select {}
+    optgroup {}
+    option {}
+  textarea {}
+  output {}
+  meter {}
+  progress {} */
+  
+  
+  /* ----- Media ----- */
+  /* figure {}
+    figcaption {}
+    figure img {}
+  svg {}
+  picture {}
+    source {}
+  iframe {}
+  video {}
+  audio {}
+  embed {}
+  object {} */
+  
+  /*  ----- Classes for alignment, positioning, widths, grids, embellishments, and animation -----  */
+  .gallery {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+  .gallery figure {
+    width: 500px;
+    margin: 1% 1%;
+    border: 2px solid var(--shadowBrownTransparent);
+    border-radius: 10px;
+    padding: 1%;
+}
+
+  .gallery img {
+    width: 100%;
+}
+
+  .gallery figcaption {
+  display:block;
+  padding:3px;
+  padding: .3rem .3rem;
+  margin: 0rem .1rem;
+  border: 1px solid var(--leafGreenTransparent);
+  border-radius: 10px;
+}
+  
+  /* .floatright {}
+  .floatleft {}
+  .center-middle {}
+  
+  .ten {}
+  .twenty {}
+  .thirty {}
+  .forty {}
+  .fifty {}
+  .sixty {}
+  .seventy {}
+  .eighty {}
+  
+  .radius {}
+  .circle {}
+  .boxshadow {}
+  .tshadow {} 
+  .gradient {}
+  .shape {} */
+
+  
+  @keyframes App-logo {}
+  
+  /*   ===== TABLET  media query overrides mobile styles ===== */
+  @media all and (min-width: 600px) {}
+  
+  /*   ===== DESKTOP  media query overrides mobile and tablet styles ===== */
+  @media all and (min-width: 1080px) {}
+  
+  /*   ===== PRINT  media query overrides previous styles =====  */
+  @media print {}
